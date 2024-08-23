@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request, make_response, session
 from flask_restful import Resource
-from models import Destination, User, Parcel, Admin, MyOrder 
+from .models import Destination, User, Parcel, Admin, MyOrder 
 from config import db, api, app
 from datetime import datetime
 from flask_bcrypt import generate_password_hash, check_password_hash

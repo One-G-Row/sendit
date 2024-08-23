@@ -7,7 +7,7 @@ from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
 import os
 
-app = Flask(__name__, static_folder="moringa/phase5/sendit/sendIT-group-3-client/build", static_url_path="/")
+app = Flask(__name__, static_folder="moringa/phase5/sendit/sendIT-group-3-client/client/build", static_url_path="/")
 CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sendit.db' 
 app.config['SECRET_KEY'] = 'group 3' 
@@ -21,7 +21,7 @@ migrate = Migrate(app, db)
 
 api = Api(app)
 
-frontend_folder = os.path.join(os.getcwd(), "..", "moringa", "phase5", "sendit", "sendIT-group-3-client", "build")
+frontend_folder = os.path.join(os.getcwd(), "..", "moringa", "phase5", "sendit", "sendIT-group-3-client","client", "build")
 dist_folder = os.path.join(frontend_folder, "dist")
 
 @app.route("/", defaults={'filename': ''})
