@@ -5,6 +5,7 @@ from datetime import datetime
 from flask_bcrypt import generate_password_hash, check_password_hash
 from flask_jwt_extended import  create_access_token, jwt_required, get_jwt_identity
 
+
 class ClearSession(Resource):
     def delete(self):
         session['page_views'] = None
