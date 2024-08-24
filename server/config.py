@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
-from utils import safe_str_cmp
+from .utils import safe_str_cmp
 import os
 
 app = Flask(__name__, static_folder="moringa/phase5/sendit/sendIT-group-3-client/client/build", static_url_path="/")
